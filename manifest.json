@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Kiosk display blocker",
+  "version": "1.0.1",
+  "description": "Disables right-click, text selection, dragging and common selection shortcuts in kiosk Chrome browsers.",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contextblocker.js"],
+      "all_frames": true,
+      "match_about_blank": true,
+      "match_origin_as_fallback": true,
+      "run_at": "document_start"
+    }
+  ]
+}
